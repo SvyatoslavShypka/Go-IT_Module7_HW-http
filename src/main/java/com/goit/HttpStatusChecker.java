@@ -6,12 +6,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 public class HttpStatusChecker {
 
@@ -35,7 +30,6 @@ public class HttpStatusChecker {
         if (response.code() == 404) {
             throw new PageNotFoundException("Page was not found");
         }
-
         return response.request().url().toString();
     }
 }

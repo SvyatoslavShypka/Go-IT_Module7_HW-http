@@ -18,8 +18,6 @@ public class HttpStatusImageDownloader {
     private static final String USER_FOLDER = System.getProperty("user.dir");
 
     public static void downloadStatusImage(int code) {
-        HttpStatusChecker httpStatusChecker = new HttpStatusChecker();
-//        String link = httpStatusChecker.getStatusImage(code);
         String link = HttpStatusChecker.getStatusImage(code);
 
         Request request = REQUEST_BUILDER.get()
